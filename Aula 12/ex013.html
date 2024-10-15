@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias da Semana</title>
+</head>
+<body>
+    <h1>Escolha um dia da semana</h1>
+    
+    <input type="radio" name="radsem" id="dom" checked> Domingo
+    <input type="radio" name="radsem" id="seg"> Segunda-Feira
+    <input type="radio" name="radsem" id="ter"> Terça-Feira
+    <input type="radio" name="radsem" id="qua"> Quarta-Feira
+    <input type="radio" name="radsem" id="qui"> Quinta-Feira 
+    <input type="radio" name="radsem" id="sex"> Sexta-Feira 
+    <input type="radio" name="radsem" id="sab"> Sábado
+    <p><input type="button" value="Ok" onclick="ok()"></p>
+    <div id="res"></div>
+    <script>
+        function ok(){
+            var fsem = document.getElementsByName('radsem')
+            var res = document.getElementById('res')
+            var dia = ''
+        
+            if(fsem[0].checked){
+                dia = 'Domingo'
+            }else if(fsem[1].checked){
+                dia = 'Segunda-Feira'
+            }else if(fsem[2].checked){
+                dia = 'Terça-Feira'
+            }else if(fsem[3].checked){
+                dia = 'Quarta-Feira'
+            }else if(fsem[4].checked){
+                dia = 'Quinta-Feira'
+            }else if(fsem[5].checked){
+                dia = 'Sexta-Feira'
+            }else if(fsem[6].checked){
+                dia = 'Sábado'
+            }
+            res.innerHTML = `Você marcou o dia da semana ${dia}`
+        }
+
+        
+        
+    </script>
+    
+</body>
+</html>

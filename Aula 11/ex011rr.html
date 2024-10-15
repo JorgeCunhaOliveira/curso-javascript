@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+</head>
+<body>
+    <h1 style="text-align: center; color: blue;">Teste de nacionalidades</h1>
+    Escolha um país: Brasil, EUA, Alemanha, Peru, Chile
+    <p>
+        Vamos digitar o nome de um país:
+        <input type="text" name="txtp" id="txtp">
+        <input style="background-color: black; color: white;" type="button" value="Enviar" onclick="testar()">
+    </p>
+    <div id="res"></div>
+    <script>
+        function testar(){
+            var res = document.getElementById('res')
+            var pas = document.getElementById('txtp')
+            var p = pas.value.toUpperCase()
+            res.innerHTML = `Seu país é ${p}.`
+            if(p == 'BRASIL'){
+                res.innerHTML += '<p>Você é Brasileiro.</p>'
+            }else if(p == 'EUA'){
+                res.innerHTML += '<p>Você é Americano</p>'
+            }else if(p == 'ALEMANHA'){
+                res.innerHTML += '<p>Você é Alemão</p>'
+            }else if(p == 'PERU'){
+                res.innerHTML += '<p>Você é Peruano</p>'
+            }else if(p == 'CHILE'){
+                res.innerHTML += '<p>Você é Chileno</p>'
+            }else {
+                res.innerHTML += '<p>País não encontrado</p>'
+            }
+        }
+    </script>
+</body>
+</html>

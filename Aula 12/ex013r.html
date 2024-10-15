@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Switch case</title>
+</head>
+<body>
+    <h1>Digite um número entre 0 e 9</h1>
+    Digite aqui seu número: <input type="number" name="txtn" id="txtn">
+    <input type="button" value="OK" onclick="ok()">
+    <div id="res"></div>
+    <script>
+        function ok(){
+            var res = document.getElementById('res')
+            var p = document.getElementById('txtn')
+            var dia = Number(p.value)
+           // res.innerHTML = `<p>Número ${dia}</p>`
+           switch(dia){
+            case 0: 
+            pala = "Brasil"
+            break
+            case 1: 
+            pala = 'Canadá'
+            break
+            case 2: 
+            pala = 'Jorge'
+            break
+            case 3: 
+            pala = 'Casa'
+            break
+            case 4: 
+            pala = 'Belo'
+            break
+            case 5: 
+            pala = '17'
+            break
+            case 6: 
+            pala = 'Gisele'
+            break
+            case 7: 
+            pala = 'Cash'
+            break
+            case 8: 
+            pala = 'Pizza'
+            break
+            case 9: 
+            pala = ' Pastel'
+            break
+            default: 
+            pala = 'Número não encontrado'
+            break
+           }
+           res.innerHTML += `<p>${pala}</p>`
+        }
+    </script>
+</body>
+</html>

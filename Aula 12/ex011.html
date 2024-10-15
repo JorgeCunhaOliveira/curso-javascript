@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votar</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Eleitores</h1>
+    Digite a sua idade: <input type="number" name="txtid" id="txtid">
+    <input type="button" value="Consultar" onclick="consultar()">
+    <div id="res"></div>
+    <script>
+        function consultar(){
+            var res = document.getElementById('res')
+            var ida = document.getElementById('txtid')
+            var i = Number(ida.value)
+            res.innerHTML += `<p>Sua idade é ${i} anos! Confira o resultado.</p>`
+                if(i < 16){
+                    res.innerHTML += '<p>Não vota</p>'
+                }else if(i <18 || i > 70){
+                    res.innerHTML += '<p>Voto facultativo</p>'
+                }else{
+                    res.innerHTML += '<p>Voto obrigatório</p>'
+                }
+        }
+        
+
+    </script>
+</body>
+</html>

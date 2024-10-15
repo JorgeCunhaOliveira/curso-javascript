@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trânsito</title>
+</head>
+<body>
+    
+    <h1>Teste de velocidade</h1>
+    <p>Sua velocidade atual é <input type="number" name="txtv" id="txtv"> km/h <input type="button" value="Verificar" onclick="verificar()"></p>
+    <div id="res"></div>
+    <script>
+        function verificar(){
+            var res = document.getElementById('res')
+            var vel = document.getElementById('txtv')
+            var v = Number(vel.value)
+            res.innerHTML += `Você passou a ${v} km/h!`
+            if(v > 70){
+                res.innerHTML += '<p>Ultrapassou o limite de velocidade. MULTADO!</p>'
+            }else{
+                res.innerHTML += '<p>Parabéns por respeitar o limite de velocidade</p>'
+            }
+            res.innerHTML += '<p>Cinto salva vidas!</p>'
+        }
+        
+    </script>
+</body>
+</html>

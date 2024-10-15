@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quilos mortais</title>
+    <style>
+        body{
+            background: blue;
+            color: white;
+            font: normal 14pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual o seu peso?</h1>
+    <p>Vamos analisar seu peso!</p>
+    Digite seu peso: <input type="number" name="txtpes" id="txtpes">
+    <input type="button" value="Enviar" onclick="analisar()">
+    <div id="res"></div>
+    <script>
+        function analisar(){
+            var res = window.document.getElementById('res')
+            var peso = window.document.getElementById('txtpes')
+            var p = Number(peso.value)
+            res.innerHTML += `<p>Seu peso é ${p} quilos</p>`
+                if(p > 90){
+                    res.innerHTML += 'Você está acima do peso'
+                }else{
+                    res.innerHTML += "Você está dentro do peso"
+                }res.innerHTML += '<p>Busque sempre uma vida saudável!</p>'
+        } 
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando condições</title>
+    
+</head>
+<body>
+    <h1>Faixa etárias</h1>
+    Digite a sua idade
+     <input type="number" name="txtidade" id="txtidade">
+     <input type="button" value="Enviar" onclick="buscar()">
+     <div id="res"></div>
+     <script>
+        function buscar(){
+            var res = window.document.getElementById('res')
+            var idade = window.document.getElementById('txtidade')
+            var idd = Number(idade.value)
+            res.innerHTML += `<p>Sua idade é ${idd} anos</p>`
+                if(idd < 18 ){
+                res.innerHTML += 'Você é criança'
+            }else if(idd >= 60){
+                res.innerHTML += 'Você é idoso'
+            }else{
+                res.innerHTML += 'Você é adulto'
+            }
+            res.innerHTML += '<p>Próximo</p>'
+        }
+        
+     </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            font: normal 10pt Arial;
+            color: rgb(231, 170, 15);
+            margin: 50px;
+            text-align: center;
+            }
+        button{
+            font: normal 20pt Arial;
+            color: white;
+            background: gray;
+            height: 100px;
+           
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <button id="botao">Clique aqui</button><br>
+    <button id="botao2">Próxima página</button>
+    <script>
+        var bot = window.document.getElementById('botao')
+        bot.addEventListener('mouseenter', entrar)
+        bot.addEventListener('mouseout', sair)
+        bot.addEventListener('click', clicar)
+        
+        function entrar(){
+            bot.innerText = 'OK!'
+            bot.style.background = 'red'
+             }
+        function sair(){
+            bot.innerText = 'Clique aqui'
+            bot.style.background = 'blue'
+        }     
+        function clicar(){
+            bot.innerText = 'Excelente!'
+            bot.style.background = 'green'
+            }
+    </script>
+    <script>
+        var bot2 = window.document.getElementById('botao2')
+        bot2.style.marginTop = '20px'
+        bot2.addEventListener('mouseenter', entrar)
+        bot2.addEventListener('mouseout', sair)
+        bot2.addEventListener('click', clicar)
+        function entrar(){
+            bot2.innerText = 'Clique aqui'
+            bot2.style.background = 'yellow'
+            bot2.style.color = 'black'
+        }
+        function sair(){
+            bot2.innerText = 'Próxima página'
+            bot2.style.background = 'red'
+        }
+        function clicar(){
+            bot2.innerText = 'Bem-Vindo!'
+            bot2.style.background = 'white'
+        }
+    </script>
+</body>
+</html>

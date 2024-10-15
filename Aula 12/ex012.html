@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom Dia!</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Periodos do dia</h1>
+     <div id="res"></div>
+     
+    <script>
+        var res = document.getElementById('res')
+        var agora = new Date()
+        var hr = agora.getHours()
+        var min = agora.getMinutes()
+        res.innerHTML += `Horário atual: ${hr} : ${min}`
+    </script>
+     <p>Digite seu horário: <input type="number" name="txth" id="txth"> <input type="button" value="Confirmar" onclick="confirme()"></p> 
+     <div id="res2"></div>
+     <script>
+        function confirme(){
+            var res2 = document.getElementById('res2')
+            var hora = document.getElementById('txth')
+            var hr = Number(hora.value)
+            res2.innerHTML += `seu horário é ${hr} horas`
+            if(hr < 6 ){
+                res2.innerHTML += '<p>Boa Madrugada!</p>'
+            }else if(hr < 12){
+                res2.innerHTML += '<p>Bom Dia!</p>'
+            }else if(hr < 18){
+                res2.innerHTML += '<p>Boa Tarde!</p>'
+            }else if(hr < 24){
+                res2.innerHTML += '<p>Boa Noite!</p>'
+            }else{
+                res2.innerHTML += '<p>[ERRO!] Hora incorreta.</p>'
+            }
+        }
+     </script>
+
+        
+</body>
+</html>
